@@ -1,0 +1,223 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    color: white;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    
+}
+
+/* Header Styles */
+#header {
+    background-color: #333333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #00c493;
+    border-radius: 5px;
+}
+
+/* Hero Styles */
+.hero {
+    background-image: url(images/[GetPaidStock.com]-6585f0e18eced.jpg);
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 48px;
+}
+
+/* Features Styles */
+.features {
+    padding: 20px;
+}
+.features h2{
+    text-align: center;
+    color: black;
+}
+
+.flexbox-item:hover{
+    background-color:#ff8902;
+    transition: all 3s ease;
+    transform: rotate(360deg);
+}
+
+.flexbox-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.flexbox-item {
+    background-color: #00c493;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+}
+
+/* Testimonials Styles */
+.testimonials {
+    padding: 20px;
+   
+}
+
+.grid-item img{
+    border-radius:50%;
+    width: 70px;
+    margin-left: 300px;
+    margin-top: -50px;
+}
+.testimonials h2{
+    text-align: center;
+    color: black;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.grid-item {
+    background-color: #ff8902;
+    padding: 20px;
+    width: 400px;
+}
+
+.grid-item:hover{
+    background-color: #00c493;
+}
+/* Call-to-Action Styles */
+.cta {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.animate-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.animate-button:hover {
+    background-color: #666;
+}
+
+.animate-button:active {
+    transform: scale(0.9);
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.animate-button:click {
+    animation: bounce 0.5s ease-in-out;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    clear: both;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero {
+        height: 200vh;
+    }
+    .flexbox-container {
+        flex-direction: column;
+    }
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu ul {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .hero {
+        height: 50vh;
+    }
+    .flexbox-container {
+        flex-direction: row;
+    }
+    .grid-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 1025px) {
+    .menu ul {
+        justify-content: space-around;
+    }
+    .hero {
+        height: 70vh;
+    }
+    .flexbox-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .grid-container {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
